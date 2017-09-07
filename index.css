@@ -2,6 +2,7 @@
   width: 400px;
   height: 200px;
   margin: auto;
+  margin-bottom: 25px;
 }
 
 .front, .back{
@@ -21,6 +22,16 @@
 
 .back {
   background: #729ce0;
+}
+
+.left-column {
+  float: left;
+  width: 50%;
+}
+
+.right-column {
+  float: right;
+  width: 50%;
 }
 
 img {
