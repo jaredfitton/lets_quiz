@@ -1,3 +1,3 @@
 $(document).ready(function() {
-  $("#card").flip();
+  $(".card").flip();
 });
