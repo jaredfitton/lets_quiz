@@ -34,6 +34,20 @@
   width: 50%;
 }
 
+.answers {
+  display: none;
+}
+
+.answer-section {
+  margin: auto;
+  width: 300px;
+  padding-bottom: 100px;
+}
+
+.submit-button {
+  text-align: center;
+}
+
 img {
   width: 80%;
   height: auto;
