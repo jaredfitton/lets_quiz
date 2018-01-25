@@ -58,7 +58,38 @@
 
     <hr>
 
-    <div class="answer-section">
+    <form action={{ url_for("renderIndex") }} method="POST">
+      1.) What is the the trig identity of d/dx f(cosx)<br>
+      <input type="radio" name="first_question">cosx</label><br/>
+      <input type="radio" name="first_question">sec^2(x)</label><br/>
+      <input type="radio" name="first_question">-sinx</label><br/>
+      <input type="radio" name="first_question">n(x^(n-1))</label><br/>
+
+      2.) What is the the trig identity of d/dx f(sinx)<br>
+      <input type="radio" name="second_question">cosx</label><br/>
+      <input type="radio" name="second_question">sec^2(x)</label><br/>
+      <input type="radio" name="second_question">-sinx</label><br/>
+      <input type="radio" name="second_question">n(x^(n-1))</label><br/>
+
+      3.) What is the the trig identity of d/dx f(x^n)<br>
+      <input type="radio" name="third_question">cosx</label><br/>
+      <input type="radio" name="third_question">sec^2(x)</label><br/>
+      <input type="radio" name="third_question">-sinx</label><br/>
+      <input type="radio" name="third_question">n(x^(n-1))</label><br/>
+
+      4.) What is the the trig identity of d/dx f(tanx)<br>
+      <input type="radio" name="fourth_question">cosx</label><br/>
+      <input type="radio" name="fourth_question">sec^2(x)</label><br/>
+      <input type="radio" name="fourth_question">-sinx</label><br/>
+      <input type="radio" name="fourth_question">n(x^(n-1))</label><br/>
+
+      <input type="submit" value="Submit">
+     </form>
+
+
+
+
+    <!-- <div class="answer-section">
       <h1> Test Yourself </h1>
       <p class="question">1.) What is the the trig identity of d/dx f(cosx)</p>
       <ul class="possible-answers">
@@ -103,7 +134,7 @@
         <p> The answer to question 4 is sec^2(x) </p>
       </div>
 
-    </div>
+    </div> -->
 
   </body>
 </html>
