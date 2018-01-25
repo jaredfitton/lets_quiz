@@ -128,10 +128,33 @@
       </div>
 
       <div class="answers">
-        <p> The answer to question 1 is -sinx </p>
-        <p> The answer to question 2 is cosx </p>
-        <p> The answer to question 3 is n(x^(n-1)) </p>
-        <p> The answer to question 4 is sec^2(x) </p>
+        <p> The answer to question 1 is -sinx
+
+            {% if 'firstQuestion' in session %}
+                Your answer to the first question was {{ session['firstQuestion'] }} <br>
+            {% endif %}
+        </p>
+
+        <p> The answer to question 2 is cosx
+
+            {% if 'secondQuestion' in session %}
+                Your answer to the Second Question was {{ session['secondQuestion'] }}
+            {% endif %}
+        </p>
+
+        <p> The answer to question 3 is n(x^(n-1))
+
+            {% if 'thirdQuestion' in session %}
+                Your answer to the third question is {{ session['thirdQuestion'] }}
+            {% endif %}
+        </p>
+
+        <p> The answer to question 4 is sec^2(x)
+
+            {% if 'forthQuestion' in session %}
+                Your answer to the fourth question is {{ session['fourthQuestion'] }}
+            {% endif %}
+        </p>
       </div>
 
     </div> -->
