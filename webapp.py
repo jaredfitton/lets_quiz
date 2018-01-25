@@ -25,7 +25,10 @@ def startOver():
 @app.route('/index',methods=['GET','POST'])
 def renderIndex():
     #set the favorite color in the session
-    session[""] = request.form[""]
+    first_question = request.form["first_question"]
+    second_question = request.form["second_question"]
+    third_question = request.form["third_question"]
+    fourth_question = request.form["fourth_question"]
     return render_template('index.html')
 
 if __name__=="__main__":
