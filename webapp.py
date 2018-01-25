@@ -22,22 +22,11 @@ def startOver():
     session.clear()
     return redirect(url_for('renderMain')) # url_for('renderMain') could be replaced with '/'
 
-@app.route('/page1')
-def renderPage1():
-    return render_template('page1.html')
-
-@app.route('/page2',methods=['GET','POST'])
-def renderPage2():
-    #set the first and last name in the session
-    session["firstName"] = request.form["firstName"]
-    session["lastName"] = request.form["lastName"]
-    return render_template('page2.html')
-
-@app.route('/page3',methods=['GET','POST'])
-def renderPage3():
+@app.route('/index',methods=['GET','POST'])
+def renderIndex():
     #set the favorite color in the session
-    session["favoriteColor"] = request.form["favoriteColor"]
-    return render_template('page3.html')
+    session[""] = request.form[""]
+    return render_template('index.html')
 
 if __name__=="__main__":
     app.run(debug=False)
