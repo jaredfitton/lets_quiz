@@ -29,6 +29,35 @@ def renderIndex():
     second_question = request.form["second_question"]
     third_question = request.form["third_question"]
     fourth_question = request.form["fourth_question"]
+
+    corect_questions = 0
+
+    if first_question == "-sinx":
+        session["first_question"] = "Correct"
+        correct_questions += 1
+    else:
+        session["first_question"] = "Incorrect"
+
+    if second_question == "cosx":
+        session["second_question"] = "Correct"
+        correct_questions += 1
+    else:
+        session["second_question"] = "Incorrect"
+
+    if third_question == "n(x^(n-1))":
+        session["third_question"] = "Correct"
+        correct_questions += 1
+    else:
+        session["first_question"] = "Incorrect"
+
+    if fourth_question == "sec^2(x)":
+        session["fourth_question"] = "Correct"
+        correct_questions += 1
+    else:
+        session["fourth_question"] = "Incorrect"
+
+        
+
     return render_template('index.html')
 
 if __name__=="__main__":
