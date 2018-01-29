@@ -30,7 +30,7 @@ def renderIndex():
         second_question = request.form["second_question"]
         third_question = request.form["third_question"]
         fourth_question = request.form["fourth_question"]
-        corect_questions = 0
+        correct_questions = 0
         question_info = {}
 
 
@@ -65,7 +65,7 @@ def renderIndex():
             if session["highest_score"] < score:
                 session["highest_score"] = score
         else:
-            session["highest_score"]
+            session["highest_score"] = score
 
         return render_template('index.html', response_question_info = question_info, response_score = score)
     else:
