@@ -130,36 +130,36 @@
         <div class="answers">
             <p> The answer to question 1 is -sinx
 
-                {% if 'first_question' in session %}
-                    Your answer to the first question was {% response_question_info["first_question"] %} <br>
+                {% if "first_question" in session %}
+                    Your answer to the first question was {{ response_question_info["first_question"] }} <br>
                 {% endif %}
             <br><br>
 
                 The answer to question 2 is cosx
-                {% if 'second_question in session %}
-                    Your answer to the Second Question was {% response_question_info["second_question"] %}
+                {% if "second_question" in session %}
+                    Your answer to the Second Question was {{ response_question_info["second_question"] }}
                 {% endif %}
             <br><br>
 
                 The answer to question 3 is n(x^(n-1))
 
-                {% if 'third_question' in session %}
-                    Your answer to the third question is {% response_question_info["third_question"] %}
+                {% if "third_question" in session %}
+                    Your answer to the third question is {{ response_question_info["third_question"] }}
                 {% endif %}
             <br><br>
 
                 The answer to question 4 is sec^2(x)
 
-                {% if 'fourth_question' in session %}
-                    Your answer to the fourth question is {% response_question_info["fourth_question"] %}
+                {% if "fourth_question" in session %}
+                    Your answer to the fourth question is {{} response_question_info["fourth_question"] }}
                 {% endif %}
             <br>
 
-                You scored a {% response_score %} percent!
+                You scored a {{ response_score }} percent!
                 The highest score is session["highest_score"]
     else:
         <!-- throw some sort of error message  -->
-        <p> response_error_message </p> 
+        <p> response_error_message </p>
 
         </p>
       </div>

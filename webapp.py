@@ -33,6 +33,8 @@ def renderIndex():
         corect_questions = 0
         question_info = {}
 
+
+
         if first_question == "-sinx":
             question_info["first_question"] = "Correct"
             correct_questions += 1
