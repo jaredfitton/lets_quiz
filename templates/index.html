@@ -7,7 +7,8 @@
     <!-- JQuery Flip Transition -->
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <script src="index.js"></script>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="{{url_for('static',filename='index.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
     <title> Calc BC Flash Cards </title>
   </head>
 
@@ -19,19 +20,19 @@
     <div class="left-column">
       <div class="card">
         <div class="front">
-          <img src="images/cosx_front.png" alt="d/dx(cosx)">
+          <img src="{{url_for('static',filename='images/cosx_front.png')}}" alt="d/dx(cosx)">
         </div>
         <div class="back">
-          <img src="images/cosx_back.png" alt="-sinx">
+          <img src="{{url_for('static',filename='images/cosx_back.png')}}" alt="-sinx">
         </div>
       </div>
 
       <div class="card">
         <div class="front">
-          <img src="images/sinx_front.png" alt="d/dx(sinx)">
+          <img src="{{url_for('static',filename='images/sinx_front.png')}}" alt="d/dx(sinx)">
         </div>
         <div class="back">
-          <img src="images/sinx_back.png" alt="cosx">
+          <img src="{{url_for('static',filename='images/sinx_back.png')}}" alt="cosx">
         </div>
       </div>
     </div>
@@ -151,7 +152,7 @@
                 The answer to question 4 is sec^2(x)
 
                 {% if "fourth_question" in session %}
-                    Your answer to the fourth question is {{} response_question_info["fourth_question"] }}
+                    Your answer to the fourth question is {{ response_question_info["fourth_question"] }}
                 {% endif %}
             <br>
 
