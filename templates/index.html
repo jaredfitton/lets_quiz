@@ -61,10 +61,10 @@
 
     <form action={{ url_for("renderIndex") }} method="POST">
       1.) What is the the trig identity of d/dx f(cosx)<br>
-      <input type="radio" name="first_question">cosx</label><br/>
-      <input type="radio" name="first_question">sec^2(x)</label><br/>
-      <input type="radio" name="first_question">-sinx</label><br/>
-      <input type="radio" name="first_question">n(x^(n-1))</label><br/>
+      <input type="radio" name="first_question" value="cosx">cosx</label><br/>
+      <input type="radio" name="first_question" value="sec^2(x)">sec^2(x)</label><br/>
+      <input type="radio" name="first_question" value="-sinx">-sinx</label><br/>
+      <input type="radio" name="first_question" value="n(x^(n-1))">n(x^(n-1))</label><br/>
 
       2.) What is the the trig identity of d/dx f(sinx)<br>
       <input type="radio" name="second_question">cosx</label><br/>
@@ -127,43 +127,42 @@
       <div class="submit-button">
         <button id="btnSubmit" type="submit">Check Answers</button>
     </div> -->
-    if response_error_message = nil:
-        <div class="answers">
-            <p> The answer to question 1 is -sinx
+    {% if response_error_message is defined %}
+        <p> The answer to question 1 is -sinx
 
-                {% if "first_question" in session %}
-                    Your answer to the first question was {{ response_question_info["first_question"] }} <br>
-                {% endif %}
-            <br><br>
+            {% if "first_question" in session %}
+                Your answer to the first question was {{ response_question_info["first_question"] }} <br>
+            {% endif %}
+        <br><br>
 
-                The answer to question 2 is cosx
-                {% if "second_question" in session %}
-                    Your answer to the Second Question was {{ response_question_info["second_question"] }}
-                {% endif %}
-            <br><br>
+            The answer to question 2 is cosx
+            {% if "second_question" in session %}
+                Your answer to the Second Question was {{ response_question_info["second_question"] }}
+            {% endif %}
+        <br><br>
 
-                The answer to question 3 is n(x^(n-1))
+            The answer to question 3 is n(x^(n-1))
 
-                {% if "third_question" in session %}
-                    Your answer to the third question is {{ response_question_info["third_question"] }}
-                {% endif %}
-            <br><br>
+            {% if "third_question" in session %}
+                Your answer to the third question is {{ response_question_info["third_question"] }}
+            {% endif %}
+        <br><br>
 
-                The answer to question 4 is sec^2(x)
+            The answer to question 4 is sec^2(x)
 
-                {% if "fourth_question" in session %}
-                    Your answer to the fourth question is {{ response_question_info["fourth_question"] }}
-                {% endif %}
-            <br>
+            {% if "fourth_question" in session %}
+                Your answer to the fourth question is {{ response_question_info["fourth_question"] }}
+            {% endif %}
+        <br>
 
-                You scored a {{ response_score }} percent!
-                The highest score is session["highest_score"]
-    else:
+            You scored a {{ response_score }} percent!
+            The highest score is session["highest_score"]
+
         <!-- throw some sort of error message  -->
-        <p> response_error_message </p>
-
         </p>
-      </div>
+    {% else %}
+        <p> {{ response_error_message }} </p>
+    {% endif %}
 
     </div>
 
