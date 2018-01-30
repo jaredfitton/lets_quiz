@@ -33,11 +33,6 @@ def renderIndex():
         correct_questions = 0
         question_info = {}
 
-        print(first_question)
-        print(second_question)
-        print(third_question)
-        print(fourth_question)
-
         if first_question == "-sinx":
             question_info["first_question"] = "Correct"
             correct_questions += 1
@@ -70,9 +65,6 @@ def renderIndex():
         else:
             session["highest_score"] = score
 
-        print(question_info)
-        print(correct_questions)
-        print(session)
 
         return render_template('index.html', response_question_info = question_info, response_score = score)
     else:
