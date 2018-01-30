@@ -35,6 +35,8 @@ def renderIndex():
 
         print(first_question)
         print(second_question)
+        print(third_question)
+        print(fourth_question)
 
         if first_question == "-sinx":
             question_info["first_question"] = "Correct"
