@@ -92,7 +92,21 @@
      </form>
 
     {% if response_question_info is defined %}
-        <table id="test-id" class="table table-bordered">
+
+        {% if response_score is defined %}
+            <table class="table table-bordered table-score">
+                <tr>
+                    <th> Current Score </th>
+                    <th> Highest Score </th>
+                </tr>
+                <tr>
+                    <td> {{ response_score }}% </td>
+                    <td> {{ session["highest_score"] }}% </td>
+                </tr>
+            </table>
+        {% endif %}
+
+        <table class="table table-bordered table-answers">
             <tr>
               <th>Question</th>
               <th>Result</th>
@@ -130,5 +144,6 @@
         {% else %}
             <p> {{ response_error_message }} </p>
         {% endif %}
+
   </body>
 </html>

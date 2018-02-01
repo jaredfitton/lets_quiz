@@ -57,7 +57,7 @@ def renderIndex():
         else:
             question_info["fourth_question"] = "Incorrect"
 
-        score = correct_questions/4.0 * 100
+        score = int(correct_questions/4.0 * 100)
 
         if "highest_score" in session:
             if session["highest_score"] < score:

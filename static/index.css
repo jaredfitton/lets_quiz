@@ -38,14 +38,15 @@
   text-align: center;
 }
 
-.table {
-
+.table-score {
+    width: 20%;
+    margin: auto;
+    margin-bottom: 30px;
 }
 
-#test-id {
-    width: 50%;
-    margin: 25%;
-    padding: 0;    
+.table-answers {
+    width: 30%;
+    margin: auto;
 }
 
 img {
@@ -67,5 +68,6 @@ p {
 }
 
 body {
-  margin: 0;
+  margin: auto;
+  padding-bottom: 50px;
 }
