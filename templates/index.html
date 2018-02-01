@@ -6,6 +6,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- JQuery Flip Transition -->
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="index.js"></script>
     <script src="{{url_for('static',filename='index.js')}}"></script>
     <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
@@ -88,43 +92,43 @@
      </form>
 
     {% if response_question_info is defined %}
-        <p> The answer to question 1 is -sinx
+        <table class="table">
+            <tr>
+              <th>Question</th>
+              <th>Result</th>
+            </tr>
 
             {% if "first_question" in response_question_info %}
-                Your answer to the first question was {{ response_question_info["first_question"] }} <br>
+                <tr>
+                    <td>#1</td>
+                    <td> {{ response_question_info["first_question"] }} <td>
+                </tr>
             {% endif %}
-        <br><br>
 
-            The answer to question 2 is cosx
             {% if "second_question" in response_question_info %}
-                Your answer to the Second Question was {{ response_question_info["second_question"] }}
+                <tr>
+                    <td> #2 </td>
+                    <td> {{ response_question_info["second_question"] }} </td>
+                </tr>
             {% endif %}
-        <br><br>
-
-            The answer to question 3 is n(x^(n-1))
 
             {% if "third_question" in response_question_info %}
-                Your answer to the third question is {{ response_question_info["third_question"] }}
+                <tr>
+                    <td> #3 </td>
+                    <td> {{ response_question_info["third_question"] }} </td>
+                </tr>
             {% endif %}
-        <br><br>
 
-            The answer to question 4 is sec^2(x)
 
             {% if "fourth_question" in response_question_info %}
-                Your answer to the fourth question is {{ response_question_info["fourth_question"] }}
+                <tr>
+                    <td> #4 </td>
+                    <td>  {{ response_question_info["fourth_question"] }} </td>
+                </tr>
             {% endif %}
-        <br>
-
-            You scored a {{ response_score }} percent!
-            The highest score is {{ session["highest_score"] }} percent.
-
-        <!-- throw some sort of error message  -->
-        </p>
-    {% else %}
-        <p> {{ response_error_message }} </p>
-    {% endif %}
-
-    </div>
-
+        </table>
+        {% else %}
+            <p> {{ response_error_message }} </p>
+        {% endif %}
   </body>
 </html>
