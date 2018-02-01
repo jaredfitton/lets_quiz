@@ -38,8 +38,14 @@
   text-align: center;
 }
 
-table {
-    margin: auto;
+.table {
+
+}
+
+#test-id {
+    width: 50%;
+    margin: 25%;
+    padding: 0;    
 }
 
 img {

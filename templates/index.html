@@ -92,7 +92,7 @@
      </form>
 
     {% if response_question_info is defined %}
-        <table class="table">
+        <table id="test-id" class="table table-bordered">
             <tr>
               <th>Question</th>
               <th>Result</th>
@@ -100,8 +100,8 @@
 
             {% if "first_question" in response_question_info %}
                 <tr>
-                    <td>#1</td>
-                    <td> {{ response_question_info["first_question"] }} <td>
+                    <td> #1 </td>
+                    <td> {{ response_question_info["first_question"] }} </td>
                 </tr>
             {% endif %}
 
